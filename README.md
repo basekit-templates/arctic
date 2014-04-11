@@ -1,4 +1,4 @@
-arctic
-======
+Arctic
+=======
 
 BaseKit Blog Template

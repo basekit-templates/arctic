@@ -1,0 +1,31 @@
+
+{% extends "layout.twig" %}
+
+{% block content %}
+
+  <header class="bk-header">
+      <div class="companyheader wrapper clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "Arctic"})|raw}}
+          	{{widget('extendednavigation', 'navigationheader', {})|raw}}
+       </div>
+  </header> 
+
+<div class="canvas">
+	<div class="page-wrap">
+		<section class="section main home-page">
+			<div class="textbox">
+				<span>{{widget('content', 'textwidgetbox1', {content: '<h4>Lorem ipsum dolor sit amet.</h4>', lines: 'all'})|raw}}</span>
+			</div>
+				{{zone('main')|raw}}
+		</section>
+	</div>
+</div>
+
+<footer class="bk-footer">
+	<div class="footer-border page-wrap">
+		{{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'profile', 'refreshtime':'1800000'})|raw}}
+	</div>
+</footer>
+
+{% endblock %}
