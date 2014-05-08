@@ -132,8 +132,7 @@ span h4 {
         position: relative;
         display: inline-block;
         float: left;
-        min-height: 50px;
-        padding:16px 0px;
+        margin-top:20px;
         @media @tablet {
             background-color: transparent;
             width:100%;
@@ -153,7 +152,6 @@ span h4 {
                 /* Then these styles are applied */
                 width: 100%;
                 margin-top:50px;
-                background-color:@color-swatch2;
             }
             li {
                 float: left;
@@ -1275,7 +1273,6 @@ a.blog-post-more-link, .blog-list-footer a {
 		width: 100%;
 	}
 	.widget .extendednavigation {
-		width:0;
 		ul li {
 			border-bottom: 1px solid fade(@color-swatch5, 30%);
 		}
@@ -1335,16 +1332,6 @@ a.blog-post-more-link, .blog-list-footer a {
 
 	.page-wrap {
 		margin-top:0;
-	}
-
-	.widget .extendednavigation ul {
-		padding-top:10px;
-		margin:0;
-		background-color:transparent;
-	}
-
-	.widget .extendednavigation ul li {
-		border-bottom:0;
 	}
 
 	.companyname {
@@ -1427,6 +1414,9 @@ a.blog-post-more-link, .blog-list-footer a {
 		margin-bottom:40px;
 		width:100%;
 		padding-top:20px;
+	}
+	.widget .extendednavigation {
+		margin-top:0;
 	}
 }
 @media @mobile {
