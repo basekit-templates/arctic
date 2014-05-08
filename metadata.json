@@ -4,9 +4,7 @@
 	"screenshot":"arctic.png",
         "pageTypes": [
         "home",
-        "default",
-        "bloglistposts",
-        "blogpost"
+        "default"
     ],
     "tags": {
     "en": ["clean", "nature", "white", "modern", "blog", "professional", "simple", "arctic", "winter", "snow", "sans serif"],
