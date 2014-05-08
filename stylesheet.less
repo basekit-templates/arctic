@@ -1418,7 +1418,17 @@ a.blog-post-more-link, .blog-list-footer a {
 	.widget .extendednavigation {
 		margin-top:0;
 	}
+	.widget.extendednavigation .bk-overlay {
+		width: 30px;
+		right: inherit !important;
+		position: absolute;
+		top: 20px!important;
+	}
+	.widget .extendednavigation a.pull {
+		top:-60px;
+	}
 }
+
 @media @mobile {
 	.widget {
 		&.companyname a {
