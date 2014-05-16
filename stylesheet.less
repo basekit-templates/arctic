@@ -1157,7 +1157,6 @@ h1, h2, h3, h4, h5, h6 {
 	Bootstrap Modifications
 	=============================== */
 
-
 .widget.responsiveslideshow .slideshow-widget-controls .dot {
 	border-radius: 100%;
 	&.selected {
@@ -1269,6 +1268,73 @@ a.blog-post-more-link, .blog-list-footer a {
 .main .menu-subsection h2 {
 	font-weight:@font-swatch2-font-weight;
 	font-size: @font-swatch2-font-size;
+}
+
+.widget.profile {
+	text-align:center;
+}
+
+.widget.profile p {
+	color:@font-swatch5-color;
+}
+
+.widget.profile a {
+	color:@font-swatch5-color;
+}
+
+.widget.profile span {
+	color:@font-swatch5-color;
+}
+
+/*	===============================
+	Ecom
+	=============================== */
+.widget.ecomcheckout .delivery select {
+	-webkit-appearance: none;
+    -moz-appearance: window;
+    appearance: none;
+    outline: none !important;
+    -moz-outline-style: none;
+    border: 1px solid @color-swatch5, 25%;
+    position: relative;
+    background: transparent;
+    padding: 10px 23px 10px 10px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-image: image('/images/arrow.png');
+    background-position: right 6% center;
+    background-repeat: no-repeat;
+    border: 0;
+    background-color: darken(@color-swatch1,3%);
+    background-position-x: 99%;
+    background-position-y: 53%;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: window;
+    appearance: none;
+    outline: none !important;
+    -moz-outline-style: none;
+    border: 1px solid @color-swatch5, 25%;
+    position: relative;
+    background: transparent;
+    padding: 10px 23px 10px 10px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-image: image('/images/arrow.png');
+    background-position: right 6% center;
+    background-repeat: no-repeat;
+    border: 0;
+    background-color: darken(@color-swatch1,3%);
+    background-position-x: 95%;
+    background-position-y: 53%;
+}
+
+.widget.ecomcheckout {
+	margin:30px 0px;
 }
 
 /*	===============================
