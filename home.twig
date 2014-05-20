@@ -3,25 +3,27 @@
 
 {% block content %}
 
-  <header class="bk-header">
-      <div class="companyheader wrapper clearfix">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-          	{{widget('extendednavigation', 'navigationheader', {})|raw}}
-       </div>
-  </header> 
+<header class="bk-header">
+	<div class="wrapper clearfix">
+		<div class="companyheader">
+		    {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+		    {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+		</div>
+		{{widget('extendednavigation', 'navigationheader', {})|raw}}
+	</div>
+</header> 
 
 <div class="canvas">
 	<div class="page-wrap">
 		<section class="section main home-page">
-				{{zone('main')|raw}}
+			{{zone('main')|raw}}
 		</section>
 	</div>
 </div>
 
 <footer class="bk-footer">
 	<div class="footer-border page-wrap">
-		{{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'profile', 'refreshtime':'1800000'})|raw}}
+		{{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
 	</div>
 </footer>
 

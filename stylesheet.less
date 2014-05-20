@@ -125,12 +125,18 @@ span h4 {
    EXTENDED NAVIGATION
    =============================== */
 
+.widget.extendednavigation {
+    float: left;
+    max-width: 65%;
+    @media @tablet {
+    	float: none;
+    	max-width: 100%;
+    }
+}
+
 .widget {
     .extendednavigation {
-        float: none;
-        position: relative;
-        display: inline-block;
-        float: left;
+    	.clearfix;
         @media @tablet {
             background-color: transparent;
             width:100%;
@@ -275,7 +281,7 @@ span h4 {
                    position: absolute;
                    margin: 0 auto;
                    width: 20px;
-                   top: -51px;
+                   top: -7px;
                    &:hover {
                        cursor: pointer;
                    }
@@ -319,7 +325,7 @@ span h4 {
 }
 
 .bk-pt-default .widget.extendednavigation {
-    background-color:none;
+    background-color: transparent;
     ul {
         li {
             &.folder{
@@ -387,9 +393,20 @@ input[type=email],
 	border:0;
 }
 
+.blogsearch input.blog-search-input {
+	-webkit-appearance: none;
+	height: 42px;	
+	width: 65%;
+	border:0;
+}
+
 .contactform input[type=email] {
 	width: 100%;
 	margin-bottom: 20px;
+}
+
+.contactform label {
+	margin-bottom: 10px;
 }
 
 input[type="search"]::-webkit-search-decoration {
@@ -657,13 +674,15 @@ body {
 	}
 }
 
+// Header
+
 header.bk-header, .nav {
 	text-align: center;
 	clear: both;
 }
 header.bk-header {
 	width: 100%;
-	padding:50px 0px 40px 0px;
+	padding: 50px 0;
 	.aside, .centre {
 		width: 100%;
 		a {
@@ -680,6 +699,9 @@ header.bk-header {
 			padding: 0;
 		}
 	}
+}
+.companyheader {
+	float: right;
 }
 .header-section, .footer-section {
 	background: fade(@color-swatch5, 10%);
@@ -1068,14 +1090,10 @@ h1, h2, h3, h4, h5, h6 {
 // 7. Blog Post
 .main .blog-post-metadata {
 	border-top: 1px solid darken(@color-swatch1, 10%);
-	width:100%;
-	padding-top:20px;
+	padding: 30px 40px;
+	margin-top: 20px;
 }
 .main .blog-post-metadata, .main .blog-post-date {
-	float: left;
-	margin-top: 20px;
-	text-decoration: none;
-	color: lighten(@font-swatch5-color, 20%);
 	time, p {
 		font-family:@font-swatch5-font-family; 
 		font-weight: @font-swatch5-font-weight; 
@@ -1097,13 +1115,18 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 18px;
 }
 
-.main .blog-post-metadata, .main .blog-post-date {
-	margin-bottom:40px;
-}
-
 .blog-post-title {
 	margin-top:60px;
 	margin-bottom:10px;
+}
+
+.blog-post-summary,
+.blog-post-more-link {
+	padding: 0 40px;
+}
+
+.blog-post-category {
+
 }
 
 .blog-post-feature-image-wrap {
@@ -1114,7 +1137,7 @@ h1, h2, h3, h4, h5, h6 {
 .blog-post-feature-image-wrap {
 	position: relative;
 	margin: 0;
-	height: 200px;
+	height: 300px;
 	width: 100%;
 	float: none;
 	margin-bottom: 10px;
@@ -1157,97 +1180,6 @@ h1, h2, h3, h4, h5, h6 {
 	Bootstrap Modifications
 	=============================== */
 
-.widget.responsiveslideshow .slideshow-widget-controls .dot {
-	border-radius: 100%;
-	&.selected {
-		background-color: @color-swatch5;
-		border-width: 3px;
-	}
-}
-
-.widget.responsiveslideshow {
-	.slideshow-widget > .btns-move > {
-		.btn-next, .btn-prev {
-			text-indent: -100px;
-			overflow: hidden;
-			width: 30px;
-			height: 30px;
-			border: 2px solid @color-swatch1;
-			border-radius: 100%;
-			&:after {
-				position: absolute;
-				display: block;
-				content: "";
-				height: 0;
-				width: 0;
-				border: 4px solid transparent;
-				top: 9px;
-				left: 12px;
-			}
-		}
-		.btn-next {
-			&:after {
-				border-left-color: fadeout(@color-swatch7, 10%);
-			}
-		}
-		.btn-prev {
-			&:after {
-				border-right-color: fadeout(@color-swatch7, 10%);
-				left: 6px;
-			}
-		}
-	}
-}
-
-.widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause {
-	background: image('/images/slideshow-pause.png') center no-repeat !important;
-	background-size: 100%;
-	&:after {
-		display: none;
-	}
-}
-.widget.responsiveslideshow:hover span.btn-play {
-	display: block;
-	&:after {
-		display: none;
-	}
-}
-.about-page .widget.responsiveslideshow .slideshow-widget .btn-play,
-.contact-page .widget.responsiveslideshow .slideshow-widget .btn-play, 
-gallery-page .widget.responsiveslideshow .slideshow-widget .btn-play,
-.default-page .widget.responsiveslideshow .slideshow-widget .btn-play,
-.home-page .widget.responsiveslideshow .slideshow-widget .btn-play,
-.widget.responsiveslideshow .slideshow-widget .btn-play {
-	background: image('/images/slideshow-play.png') center no-repeat !important;
-	background-size: 100%;
-	font-size: 0;
-	text-indent: -99999px;
-	width: 80px;
-	height: 80px;
-	border-radius: 100%;
-	&:after {
-		display: none;
-	}
-}
-
-.widget.responsiveslideshow .content-wrapper > {
-	background: fadeout(@color-swatch7, 50%);
-	.title, .description {
-		background: none;
-	}
-}
-
-.widget.responsiveslideshow .content-wrapper {
-	background-color:@color-swatch5;
-	padding:10px 0px;
-}
-
-a.blog-post-more-link, .blog-list-footer a {
-}
-
-.blog-post-metadata time, .blog-post-date time {
-}
-
 .blog-post-feature-image-wrap {
 	width: 100%;
 	height: 300px;
@@ -1284,6 +1216,130 @@ a.blog-post-more-link, .blog-list-footer a {
 
 .widget.profile span {
 	color:@font-swatch5-color;
+}
+
+/* ===============================
+   SLIDESHOW WIDGET
+   =============================== */
+.widget.responsiveslideshow {
+    .slideshow-image-list,
+    .slideshow-widget {
+        min-height: 450px;
+        @media @tablet {
+            min-height: 350px;
+        }
+        @media @mobile {
+            min-height: 280px;
+            height: 280px;
+        }
+    }
+    .title,
+    .description {
+        display: block;
+        font-size: 15px;
+        padding: 5px 0 5px 10px;
+    }
+    .description {
+      padding-top: 0;
+    }
+    .content-wrapper {
+        background: rgba(0,0,0,0.5);
+    }
+    .slideshow-widget {
+        /* Arrows */
+        .btn-prev,
+        .btn-next {
+            font-size: 0;
+            z-index: 11;
+            text-indent: -99999px;
+            width: 40px;
+            height: 40px;
+            background: rgba(0,0,0,0.5);
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            @media @mobile {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .btn-prev {
+            &:after {
+                content: "\2190";
+                color: #fff;
+                top: 10px;
+                @media @mobile {
+                    top: 4px;
+                }
+            }
+        }
+        .btn-next {
+            &:after {
+                content: "\2192";
+                color: #fff;
+                top: 10px;
+                @media @mobile {
+                    top: 4px;
+                }
+            }
+        }
+        /* Play Button */
+        .btn-play {
+            background: rgba(0,0,0,0.5);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            &:after {
+                color: #fff;
+                letter-spacing: -4px;
+                top: 0;
+            }
+        }
+    }
+    /* Slideshow Controls */
+    .slideshow-widget-controls {
+        .dot {
+            width: 11px;
+            height: 11px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            &.selected {
+                background-color: @color-swatch5;
+            }
+        }
+    }
+}
+
+.widget.responsiveslideshow .btn-play:after {
+    font-size:20px;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-play {
+    background: rgba(0,0,0,0.5);
+    font-size: 0;
+    text-indent: -99999px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 12;
+    width: 42px;
+    height: 42px;
+    top: -5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    @media @mobile {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-play:after {
+    top:-7px;
+    @media @mobile {
+        top: -12px;
+    }
 }
 
 /*	===============================
@@ -1503,9 +1559,6 @@ select {
 		width: 30px;
 		right: inherit !important;
 		position: absolute;
-	}
-	.widget .extendednavigation a.pull {
-		top:-60px;
 	}
 }
 
