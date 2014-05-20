@@ -2,6 +2,7 @@
 	"name":"Arctic",
 	"thumbnail":"arctic.png",
 	"screenshot":"arctic.png",
+	"templateType":"blog",
         "pageTypes": [
         "home",
         "default"
