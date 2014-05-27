@@ -74,6 +74,7 @@ input[type=submit],
 	line-height:@font-swatch7-line-height; 
 	letter-spacing: @font-swatch7-letter-spacing; 
 	font-size: @font-swatch7-font-size;
+	border-bottom: 1px solid #e6e6e6;
 	span {
 		color:@font-swatch7-color; 		
 	}	
@@ -381,8 +382,8 @@ textarea,
 	transition: box-shadow .2s;
 	background-color:@color-swatch1;
 	border-radius:3px;
+	border-bottom: 1px solid #e6e6e6;
 	&:focus {
-		border: 1px solid darken(@color-swatch7, 20%);
 		box-shadow: 0 0 5px @color-swatch5;
 	}
 }
@@ -406,11 +407,13 @@ input[type=email],
 	height: 42px;	
 	width: 65%;
 	border:0;
+	border-bottom: 1px solid #e6e6e6;
 }
 
 .contactform input[type=email] {
 	width: 100%;
 	margin-bottom: 20px;
+	border-bottom: 1px solid #e6e6e6;
 }
 
 .contactform label {
@@ -1042,7 +1045,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-shadow: 0 0 8px @color-swatch1;
 	position: relative;
 	margin-bottom: 40px;
-	border-top:1px solid lighten(@color-swatch7,90%);
+	border-bottom:1px solid lighten(@color-swatch7,90%);
 	margin:20px 0px;
 	> * {
 		position: relative;
