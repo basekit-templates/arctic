@@ -74,7 +74,8 @@ input[type=submit],
 	line-height:@font-swatch7-line-height; 
 	letter-spacing: @font-swatch7-letter-spacing; 
 	font-size: @font-swatch7-font-size;
-	border-bottom: 1px solid #e6e6e6;
+	border-bottom: 3px solid @color-swatch3;
+	border-right:3px solid @color-swatch3;
 	span {
 		color:@font-swatch7-color; 		
 	}	
@@ -380,7 +381,8 @@ textarea,
 	transition: box-shadow .2s;
 	background-color:@color-swatch1;
 	border-radius:3px;
-	border-bottom: 1px solid #e6e6e6;
+	border-bottom: 3px solid @color-swatch3;
+	border-right:3px solid @color-swatch3;
 	&:focus {
 		box-shadow: 0 0 5px @color-swatch5;
 	}
@@ -397,7 +399,8 @@ input[type=email],
 .signupform fieldset input {
 	height: 42px;	
 	width: 65%;
-	border:0;
+	border-bottom: 3px solid @color-swatch3;
+	border-right:3px solid @color-swatch3;
 }
 
 .blogsearch input.blog-search-input {
@@ -405,13 +408,15 @@ input[type=email],
 	height: 42px;	
 	width: 65%;
 	border:0;
-	border-bottom: 1px solid #e6e6e6;
+	border-bottom: 3px solid @color-swatch3;
+	border-right:3px solid @color-swatch3;
 }
 
 .contactform input[type=email] {
 	width: 100%;
 	margin-bottom: 20px;
-	border-bottom: 1px solid #e6e6e6;
+	border-bottom: 3px solid @color-swatch3;
+	border-right:3px solid @color-swatch3;
 }
 
 .contactform label {
@@ -833,7 +838,6 @@ header.bk-header .header-left .widget.profile span {
  .widget.profile span {
     font-family:@font-swatch9-font-family;
     font-weight: @font-swatch9-font-weight;
-    color:@font-swatch9-color;
     line-height:@font-swatch9-line-height;
     letter-spacing: @font-swatch9-letter-spacing;
     font-size: @font-swatch9-font-size;    
@@ -1091,11 +1095,12 @@ h1, h2, h3, h4, h5, h6 {
 		width: 75%;
 		border-radius: 3px;
 		border: none;
-		border-bottom: 1px solid darken(@color-swatch1, 10%);
 		padding: 0;
 		padding-top: 8px;
 		margin-right: -3px;
 		text-indent:10px;
+		border-bottom: 3px solid @color-swatch3;
+		border-right:3px solid @color-swatch3;
 	}
 	button, button:hover {
 		border-radius: 3px;
@@ -1231,15 +1236,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .widget.profile p {
-	color:@font-swatch5-color;
+	color:@font-swatch6-color;
 }
 
 .widget.profile a {
-	color:@font-swatch5-color;
+	color:@font-swatch6-color;
 }
 
 .widget.profile span {
-	color:@font-swatch5-color;
+	color:@font-swatch6-color;
 }
 
 /* ===============================
@@ -1366,11 +1371,20 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/*	===============================
-	Ecom
-	=============================== */
+/* ===============================
+   Ecom
+   =============================== */
+
+.widget.ecomcheckout .checkout-order-button {
+    background-color:@color-swatch3;
+}
+
+.widget.ecomcheckout .checkout-order-button:hover {
+    background-color:lighten(@color-swatch3,10%);
+}
+
 .widget.ecomcheckout .delivery select {
-	-webkit-appearance: none;
+    -webkit-appearance: none;
     -moz-appearance: window;
     appearance: none;
     outline: none !important;
@@ -1381,14 +1395,16 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px 23px 10px 10px;
     -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
-    border-radius: 0px;
+    border-radius: 3px;
     background-image: image('/images/arrow.png');
     background-position: right 6% center;
     background-repeat: no-repeat;
     border: 0;
-    background-color: darken(@color-swatch1,3%);
+    background-color: @color-swatch1;
     background-position-x: 99%;
     background-position-y: 53%;
+    border-bottom: 3px solid @color-swatch3;
+    border-right:3px solid @color-swatch3;
 }
 
 select {
@@ -1403,18 +1419,16 @@ select {
     padding: 10px 23px 10px 10px;
     -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
-    border-radius: 0px;
+    border-radius: 3px;
     background-image: image('/images/arrow.png');
     background-position: right 6% center;
     background-repeat: no-repeat;
     border: 0;
-    background-color: darken(@color-swatch1,3%);
+    background-color: @color-swatch1;
     background-position-x: 95%;
     background-position-y: 53%;
-}
-
-.widget.ecomcheckout {
-	margin:30px 0px;
+    border-bottom: 3px solid @color-swatch3;
+    border-right:3px solid @color-swatch3;
 }
 
 select::-ms-expand {
@@ -1428,11 +1442,39 @@ select::-ms-expand {
    text-overflow: '';
 }
 
+.ecom-featuredproducts-wrap h2, .ecom-productslist-product h2, .ecom-product h2 {
+    font-size:@font-swatch3-font-size;
+}
+
+.widget.ecomcheckout table tr td .checkout-quantitybtn button {
+    background-color:@color-swatch3;
+    &:hover {
+        background-color:lighten(@color-swatch3,10%);
+    }
+}
+
+.ecom-productslist-products button.btn {
+    padding:7px 14px;
+}
+
+.ecom-productlist-info {
+    text-align:center;
+}
+
+input, textarea {
+	border-radius:3px;
+	border-bottom:3px solid @color-swatch3;
+	border-top:0;
+	border-left:0;
+	border-right:3px solid @color-swatch3;
+}
+
 /*	===============================
 	Media queries
 	=============================== */
 @media @tablet {
 	header.bk-header {
+		padding: 30px 0;
 		.left {
 			display: none;
 		}
@@ -1450,8 +1492,11 @@ select::-ms-expand {
 	}
 	.widget .extendednavigation {
 		ul li {
-			border-bottom: 1px solid fade(@color-swatch5, 30%);
+			border:0;
 		}
+	}
+	.widget .extendednavigation ul li:first-child {
+		border-top:0;
 	}
 
 	.nav {
@@ -1665,5 +1710,8 @@ select::-ms-expand {
 	}
 	.companyname {
 		margin-top: -10px;
+	}
+	.widget .extendednavigation a.pull {
+		top: 35px;
 	}
 }
