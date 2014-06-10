@@ -3,10 +3,7 @@
 	"thumbnail":"arctic.png",
 	"screenshot":"arctic.png",
 	"templateType":"blog",
-        "pageTypes": [
-        "home",
-        "default"
-    ],
+        
     "templateType":"blog",
     "tags": {
     "en": ["clean", "nature", "white", "modern", "blog", "professional", "simple", "arctic", "winter", "snow", "sans serif"],
