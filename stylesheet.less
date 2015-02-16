@@ -441,7 +441,8 @@ button.btn,
 .widget.blogsearch button,
 .widget.ecombasket .ecombasket-pull,
 .widget.ecomproduct .ecom-product .btn,
-.widget.ecombasketsummary .basket-summary-quantity button {
+.widget.ecombasketsummary .basket-summary-quantity button,
+.btn.ecombasket-summary-link {
 	background-color: @color-swatch3;
 	border: none;
 	-webkit-transition: background-color .2s;
@@ -452,10 +453,12 @@ button.btn,
 	border-radius:3px;
 	border-bottom: 3px solid darken(@color-swatch3,10%);
 	border-right: 3px solid darken(@color-swatch3,10%);
+	font-weight: @font-swatch7-font-weight;
 	&:hover {
 		background-color: lighten(@color-swatch3,5%);
 		border-bottom: 3px solid @color-swatch3;
 		border-right: 3px solid @color-swatch3;
+		text-decoration: none;
 	}
 }
 
@@ -938,6 +941,13 @@ select {
       margin-bottom: 10px;
     }
   }
+}
+
+.widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button {
+	text-decoration: underline;
+	background-color: transparent;
+	border: 0;
+	color: @font-swatch4-color;
 }
 
 /*	===============================
