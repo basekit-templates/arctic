@@ -397,7 +397,7 @@ input[type=email],
 }
 
 .signupform fieldset input {
-	margin-right: 10px;
+	margin-right: 5px;
 }
 
 .blogsearch input.blog-search-input {
@@ -407,6 +407,7 @@ input[type=email],
 	border:0;
 	border-bottom: 3px solid @color-swatch3;
 	border-right:3px solid @color-swatch3;
+	margin-right: 10px;
 }
 
 .contactform input[type=email] {
@@ -490,11 +491,6 @@ button.btn,
 .widget.feature .feature-bgimg .content button.btn,
 .contactform button.btn {
 	padding: 13px 14px;
-}
-
-.blog-search-submit-button {
-	padding:10px 14px 5px 14px;
-	margin-left:10px;
 }
 
 .widget.profile form button, .signupform fieldset button {
@@ -596,10 +592,6 @@ button.btn,
 	margin-bottom:10px;
 }
 
-.main .menu-items .inner-item {
-	text-align:center;
-}
-
 .widget.menu .main {
     width:100%;
 }
@@ -608,8 +600,127 @@ button.btn,
 	border-radius:5px;
 }
 
-.main .menu-items .menu-item {
-	border-radius:5px;
+.menu-item-name {
+	margin-bottom: 20px;
+}
+
+.menu-item h3 {
+	font-weight:@font-swatch3-font-weight;
+	font-size: @font-swatch3-font-size;
+}
+
+.main {
+	padding: 1em 2em 1.5em 2em;
+	clear: both;
+	text-align:left;
+	.menu-items {
+		column-count: 3;
+        column-gap: 80px;
+        -moz-column-count: 3;
+        -moz-column-gap: 80px; 
+        -webkit-column-count: 3;
+        -webkit-column-gap: 80px;
+		.menu-item {
+			padding: 1px 20px 45px;
+			border-radius:5px;
+		}
+		li {
+			break-inside: avoid;
+	        -webkit-column-break-inside: avoid;
+	        -moz-column-break-inside: avoid;
+	        -ms-column-break-inside: avoid;
+	        -o-column-break-inside: avoid;
+	        page-break-inside: avoid;
+			padding: 1em 1em !important;
+		}
+		.inner-item {
+			text-align:center;
+			.clearfix;
+		}
+	}
+	.menu-subsection {
+		list-style: none;
+		text-align: center;
+		border:0;
+		background-color:transparent;
+		h2 {
+			color: @color-swatch4;
+			font-size: @font-swatch4-font-size;
+		}
+		.menu-subsection-header {
+			margin-bottom: 1em;
+			h2 {
+				margin-top: 1em;
+				line-height: @font-swatch4-line-height;
+			}
+		}
+	}
+	.menu-section-header {
+		list-style: none;
+		clear: both;
+		padding: 1em;
+		margin-bottom: 1em;
+	}
+	.menu-item img {
+		margin-left: 1em;
+		padding: 2px;
+		display: none;
+	}
+	.menu-item-price p {
+		color: @color-swatch5;
+		font-family: @font-swatch5-font-family;
+		font-size: bkscale(@font-swatch5-font-size, 1.1);
+	}
+	.menu-item-image-wrap{
+		width: 100%;
+		height: 200px;
+		margin-bottom: 10px;
+		background-size: cover;
+		background-position: center center;
+		padding: 2px;
+	}
+}
+
+.menu-subsection-wrapper.menu-subsection-promoted {
+	background-color: rgba(1, 1, 1, 0.05);
+	padding:20px;
+}
+
+.menu-item-promoted {
+	background-color: rgba(1, 1, 1, 0.05);
+}
+
+.menu-subsection {
+	clear: both;
+}
+.menu-description {
+	margin-bottom: 10px;
+}
+
+.menu-section-item-dietary-props {
+	display: block;
+}
+
+.menu-header {
+	border-bottom: 1px solid fade(@color-swatch5, 10%);
+	padding: 1em 0;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+.menu-item .icon {
+	position: relative;
+	display: none;
+	width: 1.5em;
+	z-index: 1;
+}
+
+.menu-info {
+	clear: both;
+}
+
+.widget.menu .menu-items > * {
+	display: block;
 }
 
 /*	===============================
@@ -679,6 +790,10 @@ button.btn,
     box-sizing: border-box;
     height: 45px;
     min-width: 200px;
+    margin-right: 10px;
+    @media @mobile {
+    	margin-bottom: 10px;
+    }
   }
   button {
     position: relative;
@@ -1144,75 +1259,6 @@ body {
 	font-size: @font-swatch10-font-size;
 }
 
-.main {
-	padding: 1em 2em 1.5em 2em;
-	clear: both;
-	text-align:left;
-	.menu-items {
-		column-count: 3;
-        column-gap: 80px;
-        -moz-column-count: 3;
-        -moz-column-gap: 80px; 
-        -webkit-column-count: 3;
-        -webkit-column-gap: 80px;
-		.menu-item {
-			padding: 1px 20px 45px;
-		}
-		li {
-			break-inside: avoid;
-	        -webkit-column-break-inside: avoid;
-	        -moz-column-break-inside: avoid;
-	        -ms-column-break-inside: avoid;
-	        -o-column-break-inside: avoid;
-	        page-break-inside: avoid;
-			padding: 1em 1em !important;
-		}
-		.inner-item {
-			.clearfix;
-		}
-	}
-	.menu-subsection {
-		list-style: none;
-		text-align: center;
-		border: 3px solid @color-swatch3;
-		h2 {
-			color: @color-swatch4;
-			font-size: @font-swatch4-font-size;
-		}
-		.menu-subsection-header {
-			margin-bottom: 1em;
-			h2 {
-				margin-top: 1em;
-				line-height: @font-swatch4-line-height;
-			}
-		}
-	}
-	.menu-section-header {
-		list-style: none;
-		clear: both;
-		padding: 1em;
-		margin-bottom: 1em;
-	}
-	.menu-item img {
-		margin-left: 1em;
-		padding: 2px;
-		display: none;
-	}
-	.menu-item-price p {
-		color: @color-swatch5;
-		font-family: @font-swatch5-font-family;
-		font-size: bkscale(@font-swatch5-font-size, 1.1);
-	}
-	.menu-item-image-wrap{
-		width: 100%;
-		height: 200px;
-		margin-bottom: 10px;
-		background-size: cover;
-		background-position: center center;
-		padding: 2px;
-	}
-}
-
 // Header
 
 header.bk-header, .nav {
@@ -1296,31 +1342,6 @@ footer.bk-footer h3 {
 	small {
 		color: lighten(@color-swatch5, 20%);
 	}
-}
-
-.main .menu-subsection {
-	border:0;
-	background-color:transparent;
-}
-
-.menu-subsection-wrapper.menu-subsection-promoted {
-	background-color: rgba(1, 1, 1, 0.05);
-	padding:20px;
-}
-
-.menu-item-promoted {
-	background-color: rgba(1, 1, 1, 0.05);
-}
-
-.menu-subsection {
-	clear: both;
-}
-.menu-description {
-	margin-bottom: 10px;
-}
-
-.menu-section-item-dietary-props {
-	display: block;
 }
 
 .clearfix:before,
@@ -1491,21 +1512,7 @@ span.cross {
 		padding-top: 5%;
 	}
 }
-.menu-header {
-	border-bottom: 1px solid fade(@color-swatch5, 10%);
-	padding: 1em 0;
-	margin-bottom: 2em;
-	text-align: center;
-}
-.menu-item .icon {
-	position: relative;
-	display: none;
-	width: 1.5em;
-	z-index: 1;
-}
-.menu-info {
-	clear: both;
-}
+
 .alt {
 	.icon {
 		display: inline-block;
@@ -1717,6 +1724,10 @@ h1, h2, h3, h4, h5, h6 {
 	padding:0px 40px;
 }
 
+.blog-search-submit-button {
+	padding:10px 14px 5px 14px;
+}
+
 /*	===============================
 	Bootstrap Modifications
 	=============================== */
@@ -1731,16 +1742,6 @@ h1, h2, h3, h4, h5, h6 {
 	img {
 		display: none;
 	}
-}
-
-.menu-item h3 {
-	font-weight:@font-swatch3-font-weight;
-	font-size: @font-swatch3-font-size;
-}
-
-.main .menu-subsection h2 {
-	font-weight:@font-swatch2-font-weight;
-	font-size: @font-swatch2-font-size;
 }
 
 .widget.profile {
