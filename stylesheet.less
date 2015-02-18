@@ -81,6 +81,10 @@ input[type=submit],
 	}	
 }
 
+.widget.tweet a {
+	-webkit-font-smoothing: antialiased;
+}
+
 .widget.feature .feature-bgimg {
 	h2 {
 		font-family:@font-swatch8-font-family; 
@@ -531,6 +535,10 @@ button.btn,
 	}
 }
 
+.twitter ul li a {
+	font-size: @font-family5-font-size;
+}
+
 .twitter-profile-pic {
 	a {
 		border: 0;
@@ -868,6 +876,7 @@ select {
 	margin-top: 20px;
 	float: right;
 	@media @tablet {
+		float: initial;
 		width: 100%;
 	}
 }
@@ -1614,7 +1623,7 @@ h1, h2, h3, h4, h5, h6 {
 		padding-top: 0;
 	}
 	input[type=search], input[type=search]:focus {
-		width: 75%;
+		width: 90%;
 		border-radius: 3px;
 		border: none;
 		padding: 0;
@@ -1623,11 +1632,19 @@ h1, h2, h3, h4, h5, h6 {
 		text-indent:10px;
 		border-bottom: 3px solid @color-swatch3;
 		border-right:3px solid @color-swatch3;
+		@media @mobile {
+			width: 100%;
+		}
 	}
 }
 
 .svg .widget.blogsearch button {
 	background-image: image('/images/icon-search.svg');
+	max-width: 10%;
+	@media @mobile {
+		margin-top: 10px;
+		max-width: 100%;
+	}
 }
 
 // 7. Blog Post
@@ -2032,6 +2049,9 @@ input, textarea {
 	}
 	.widget .extendednavigation ul li:first-child {
 		border-top:0;
+		a {
+			padding-left: 0;
+		}
 	}
 
 	.nav {
