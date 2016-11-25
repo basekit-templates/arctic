@@ -364,6 +364,23 @@ span h4 {
 /*
 	FORMS
 */
+
+.advancedcontactform {
+    label {
+        margin-bottom: 10px;
+    }
+    .input {
+        width: 100%;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    select {
+        background-position-x: 98%;
+    }
+}
+
+
 input[type=search],
 input[type=text],
 input[type=email],
@@ -385,12 +402,14 @@ textarea,
 		box-shadow: 0 0 5px @color-swatch5;
 	}
 }
+
 textarea {
 	resize: vertical;
 	min-height: 150px;
 	margin-bottom:20px;
 	width:100%;
 }
+
 input[type=search],
 input[type=text],
 input[type=email],
@@ -448,7 +467,8 @@ button.btn,
 .widget.ecombasket .ecombasket-pull,
 .widget.ecomproduct .ecom-product .btn,
 .widget.ecombasketsummary .basket-summary-quantity button,
-.btn.ecombasket-summary-link {
+.btn.ecombasket-summary-link,
+.advancedcontactform button {
 	background-color: @color-swatch3;
 	border: none;
 	-webkit-transition: background-color .2s;
